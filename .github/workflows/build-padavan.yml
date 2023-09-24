@@ -75,6 +75,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUAED/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_WIREGUAED-TOOLS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
 
         ######################################################################
@@ -97,6 +98,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config  #阿里云盘  ~3m
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUAED=y" >> .config #wireguaed
+        echo "CONFIG_FIRMWARE_INCLUDE_WIREGUAED-TOOLS=y" >> .config #wireguaed-tools
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #aliddns
         else
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
